@@ -21,15 +21,15 @@ public class Category {
     @Id
     private String id;
 
-    @NotBlank(message = "")
+    @NotBlank(message = "category title is mandatory")
     @Indexed(unique = true)
     private String title;
 
-    @NotBlank(message = "The category description is mandatory")
+    @NotBlank(message = "category description is mandatory")
     private String description;
 
     @Field("owner_id")
-    @NotBlank(message = "The owner ID is mandatory")
+    @NotBlank(message = "owner ID is mandatory")
     private String ownerId;
 
     @CreatedDate
